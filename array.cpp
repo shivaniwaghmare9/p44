@@ -1,3 +1,5 @@
+//================================ARRAY=============================
+
 // Online C++ compiler to run C++ program online
 //========================find maximum element===============
 #include <iostream>
@@ -14,7 +16,7 @@ int main() {
    cout<<max;
 }
 // Online C++ compiler to run C++ program online
-//========================find maximm element===============
+//========================find MINIMUM element===============
 #include <iostream>
 using namespace std;
 int main() {
@@ -56,3 +58,143 @@ int main() {
    }
   
 }
+//================================desending array=============================
+
+#include <iostream>
+using namespace std;
+int main(){
+    
+int arr[]={6,5,7,4,8,9};
+int size=sizeof(arr)/sizeof(arr[0]);
+for(int i=0; i<size; i++){
+    for(int j=i+1; j<size; j++){
+        if(arr[j]>arr[i]){
+            int tmp;
+            tmp=arr[j];
+            arr[j]=arr[i];
+            arr[i]=tmp;
+        }
+    }
+}
+
+cout<<"\nafter applying"<<endl;
+for(int i=0; i<6; i++){
+    cout<<arr[i]<<"\t";
+}
+  
+}
+
+//==========================asending array==========================
+
+#include <iostream>
+using namespace std;
+int main(){
+    
+int arr[]={6,5,7,4,8,9};
+int size=sizeof(arr)/sizeof(arr[0]);
+for(int i=0; i<size; i++){
+    for(int j=i+1; j<size; j++){
+        if(arr[j]<arr[i]){
+            int tmp;
+            tmp=arr[j];
+            arr[j]=arr[i];
+            arr[i]=tmp;
+        }
+    }
+}
+
+cout<<"\nafter applying"<<endl;
+for(int i=0; i<6; i++){
+    cout<<arr[i]<<"\t";
+}
+  
+}
+//=================================2nd largest number==============================
+#include <iostream>
+using namespace std;
+int main(){
+    
+int arr[]={6,5,7,4,8,9};
+int size=sizeof(arr)/sizeof(arr[0]);
+for(int i=0; i<2; i++){
+    for(int j=i+1; j<size; j++){
+        if(arr[j]>arr[i]){
+            int tmp;
+            tmp=arr[j];
+            arr[j]=arr[i];
+            arr[i]=tmp;
+        }
+    }
+}
+
+
+    cout<<arr[1]<<"\t";
+}
+
+//=================================2nd smallest number==============================
+#include <iostream>
+using namespace std;
+int main(){
+    
+int arr[]={6,5,7,4,8,9};
+int size=sizeof(arr)/sizeof(arr[0]);
+for(int i=0; i<2; i++){
+    for(int j=i+1; j<size; j++){
+        if(arr[j]<arr[i]){
+            int tmp;
+            tmp=arr[j];
+            arr[j]=arr[i];
+            arr[i]=tmp;
+        }
+    }
+}
+
+
+    cout<<arr[1]<<"\t";
+}
+
+  //=========================================kth indexing====================
+#include <iostream>
+using namespace std;
+int main(){
+    
+int arr[]={6,5,7,4,8,9};
+int k;
+cout<<"enter the kth";
+cin>>k;
+int size=sizeof(arr)/sizeof(arr[0]);
+for(int i=0; i<k; i++){
+    for(int j=i+1; j<size; j++){
+        if(arr[j]>arr[i]){
+            int tmp;
+            tmp=arr[j];
+            arr[j]=arr[i];
+            arr[i]=tmp;
+        }
+    }
+}
+
+
+    cout<<arr[k-1]<<"\t";
+}
+//==========================================missing number============================
+  
+
+  #include <iostream>
+using namespace std;
+int main(){
+    
+int arr[]={1,3,4,6,8};
+for(int i=0; i<4; i++){
+    if(arr[i+1]-arr[i]>1)
+    {
+        cout<<(arr[i+1]-1);
+    }
+}
+}
+
+  
+
+
+
+
