@@ -333,7 +333,52 @@ int main() {
   }
   }
 }
+// Online C++ compiler to run C++ program online
+//================================PALINDROM=================
+#include <iostream>
+using namespace std;
+int main() {
+    int arr[]={1,2,2,1};
+   int i=0;
+   int j=3;
+   while(i<j){
+       if(arr[i]!=arr[j]){
+           cout<<"Not a palindrom";
+           return 0;
+       }
+   
+   i++;
+   j--;
+}
+cout<<"palindrom";
+}
+
+    
+  // Online C++ compiler to run C++ program online
+//============================MOVES ZERO'S IN THE END OF ARRAY=================
+#include <iostream>
+using namespace std;
+int main() {
+    int arr[]={1,0,2,0,3,0};
+    int j=0;
+    for(int i=0; i<6; i++){
+        if(arr[i]!=0){
+            int tmp; 
+            tmp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=tmp;
+            j++;
+        }
+    }
+    for(int i=0; i<6; i++){
+        cout<<arr[i]<<"\t";
+    }
+    
   
+  
+}
+
+    
   
 
 
