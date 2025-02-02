@@ -377,6 +377,31 @@ int main() {
   
   
 }
+// Online C++ compiler to run C++ program online
+///==========================target indexing print=================================
+#include <iostream>
+using namespace std;
+int main() {
+  int arr[]={1,2,3,4,6};
+  int target=10;
+  for(int i=0; i<5; i++)
+  {
+        for(int j=0; j<5; j++)
+        {
+            if(arr[i]+arr[j]==target)
+            
+            {
+                cout<<i<<"\t"<<j;
+                //cout<<arr[i]<<arr[j];
+                //cout<<i<<"and"<<j<<":"<<arr[i]<<arr[j];
+                return 0;
+            }                              //output  indexnumber=3,4
+        }                                   //output  element=4,6
+  }
+  cout<<"no";
+  return 0;
+       
+}
 
     
   
