@@ -189,6 +189,8 @@ for(int i=0; i<4; i++){
     if(arr[i+1]-arr[i]>1)
     {
         cout<<(arr[i+1]-1);
+        //cout<<arr[i]+1<<endl;
+        //cout<<++arr[i]<<endl;
     }
 }
 }
@@ -386,7 +388,7 @@ int main() {
   int target=10;
   for(int i=0; i<5; i++)
   {
-        for(int j=0; j<5; j++)
+        for(int j=i+1; j<5; j++)
         {
             if(arr[i]+arr[j]==target)
             
@@ -402,7 +404,69 @@ int main() {
   return 0;
        
 }
-
+// Online C++ compiler to run C++ program online
+//============================zero counting in array=============================================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={0,2,0,0,0,0,3};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   int count=0;
+  
+   for(int i=0; i<size-1; i++){
+       if(arr[i]==0){
+           count++;
+       }
+   }
+     cout<<"zero in array"<<"\t"<<count;    
+     return 0;
+}
+// Online C++ compiler to run C++ program online
+//============================asending array is sort============================================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={2,6,8,9,11};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   bool sort=true;
+   for(int i=0; i<size-1; i++){
+       if(arr[i]>arr[i+1]){
+           sort=false;
+           break;
+       }
+   }
+   if(sort==true){
+       cout<<"array is sort"<<endl;
+       return 0;
+   }
+   else{
+       cout<<"array is not a sort";
+       return 0;
+   }
+}
+// Online C++ compiler to run C++ program online
+//============================desending array is sort======================================
+#include <iostream>
+using namespace std;
+int main() {
+   int arr[]={19,18,16,14,13};
+   int size=sizeof(arr)/sizeof(arr[0]);
+   bool sort=true;
+   for(int i=0; i<size-1; i++){
+       if(arr[i]<arr[i+1]){
+           sort=false;
+           break;
+       }
+   }
+   if(sort==true){
+       cout<<"array is sort"<<endl;
+       return 0;
+   }
+   else{
+       cout<<"array is not a sort";
+       return 0;
+   }
+}
     
   
 
