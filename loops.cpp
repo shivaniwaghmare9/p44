@@ -60,7 +60,8 @@ int main()
    int a=num;
    int sum=0;
    while(num!=0){
-       int m=num%10;
+       int m;
+       m=num%10;
        sum+=m*m*m;
        num/=10;
        
