@@ -179,3 +179,88 @@ int main(){
   //  cin>>n;
     cout<<sum(5);//cout<<sum(n);
 }
+
+
+// Online C++ compiler to run C++ program online
+//==================call by value================================
+#include <iostream>
+using namespace std;
+int plusone(int num){
+ num=num+1;  //formal argument
+ return num;
+ }
+
+int main() {
+    int a=10;
+    cout<<plusone(a)<<endl;//actual argument
+    cout<<a;                 //output=11,10
+}
+// Online C++ compiler to run C++ program online
+//==================call by refrence=================================
+#include <iostream>
+using namespace std;
+int ref(int &num){
+ num=num+1;  //formal argument
+ return num;
+ }
+
+int main() {
+    int a=10;
+    cout<<ref(a)<<endl;//actual argument
+    cout<<a;                   //output=11,11
+
+}
+// Online C++ compiler to run C++ program online
+//==================call by address=================================
+#include <iostream>
+using namespace std;
+int plusone(int *num){
+ *num=*num+1;  //formal argument
+ return *num;
+ }
+
+int main() {
+    int a=10;
+    cout<<plusone(&a)<<endl;//actual argument
+    cout<<a;                  //output=11,11
+}
+
+//POINTER==int *a;
+//REFRENCE=int &a;
+
+////////////////=================================FUNCTION OVERLOADING==========================================
+//FUNCTION SAME NAME ,BUT DEFFRENT PARAMETER
+// Online C++ compiler to run C++ program online
+//==================FUNCTION OVERLOADING=================================
+#include <iostream>
+using namespace std;
+int sum(int a){
+    return a;
+}
+int sum(int a,int b){
+    return a+b;
+}
+int sum(int a,int b,int c){
+    c+=a+b;
+    return c;
+}
+int main(){                   //output=4,11,12
+    int n;
+    cout<<sum(4)<<"\n";
+    cout<<sum(5,6)<<"\n";
+    cout<<sum(3,4,5);
+}
+
+// Online C++ compiler to run C++ program online
+//==================DEFAULT ARGUMENT(OR PARAMETER=================================
+#include <iostream>
+using namespace std;
+int sum(int a=0,int b=0){
+    return  a+b;
+}
+
+int main(){
+   // cout<<sum(7);    //bye default ek value 0 leli
+    cout<<sum(7,6);
+                                   //OUTPUT=13 OR 7
+}
