@@ -251,6 +251,7 @@ int main(){                   //output=4,11,12
     cout<<sum(3,4,5);
 }
 
+
 // Online C++ compiler to run C++ program online
 //==================DEFAULT ARGUMENT(OR PARAMETER=================================
 #include <iostream>
@@ -263,4 +264,17 @@ int main(){
    // cout<<sum(7);    //bye default ek value 0 leli
     cout<<sum(7,6);
                                    //OUTPUT=13 OR 7
+}
+// Online C++ compiler to run C++ program online/
+//=========================sky values=================================
+//A=65
+//a=97
+#include <iostream>
+using namespace std;
+int main(){
+   // int a=65;
+    //cout<<char(a)<<"\n";
+    for(int i=0; i<=125; i++){
+        cout<<i<<"="<<char(i)<<endl;
+    }
 }
