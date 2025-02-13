@@ -171,6 +171,46 @@ int main() {
     
 }
 
+// Online C++ compiler to run C++ program online
+//============================sky value=============================================
+#include <iostream>
+using namespace std;
+
+int main() {
+string str="SHivaNI";
+   for(int i=0; i<127; i++)
+   {
+       cout<<"value of:"<<i<<"="<<char(i)<<endl;
+    }
+    
+}
+
+// Online C++ compiler to run C++ program online
+//============================lower-to-uppercase=============================================
+
+#include <iostream>
+using namespace std;
+int main() {
+    string str="ShiVAni";
+    int size=str.length();
+    for(int i=0; i<size;i++) 
+    {
+     if(int(str[i])>=65 && int(str[i])<=90)
+       {
+         str[i]=char(int(str[i])+32);
+         
+       }
+     else if(int(str[i])>=97 && int(str[i])<=122)
+        {
+           
+         str[i]=char(int(str[i])-32);
+         
+        }
+    }
+    cout<<"value of:"<<str;
+    }
+
+
 
 
 
