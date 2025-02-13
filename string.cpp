@@ -82,3 +82,74 @@ int main() {
     }
     cout<<"anagram";
 }
+
+// Online C++ compiler to run C++ program online
+//==================balance paranthese====================================
+#include <iostream>
+using namespace std;
+int main() {
+    string str="{([])}";                      //ek koi bhi closing bracket htaa diyaa to not balanced output 
+    int cur=0,squ=0,par=0;
+    int size=str.length();
+    for(int i=0; i<size; i++)
+    {
+        if(str[i]=='('){par++;}
+       else if(str[i]=='['){squ++;}
+       else  if(str[i]=='{'){cur++;}
+       else if(str[i]==')'){par--;}
+       else if(str[i]==']'){squ--;}
+       else if(str[i]=='}'){cur--;}
+    }
+    if(cur==0 && squ==0 && par==0)
+    {
+        cout<<"balanced";
+    
+    }
+    else
+    {
+        cout<<"not balanced";
+                                   //output==balanced
+    }
+}
+
+// Online C++ compiler to run C++ program online
+//==================balance paranthese(agar phale hi closing mil jaaye to )====================================
+#include <iostream>
+using namespace std;
+int main() {
+    string str="}([]){";
+    int cur=0,squ=0,par=0;
+    int size=str.length();
+    for(int i=0; i<size; i++)
+    {
+        if(str[i]=='('){par++;}
+       else if(str[i]=='['){squ++;}
+       else  if(str[i]=='{'){cur++;}
+       else if(str[i]==')')
+       {     par--;
+           if(par<0){cout<<"not balanced"; return 0;}
+       }
+       else if(str[i]==']')
+       {    squ--;
+           if(squ<0){cout<<"not balanced"; return 0;}
+       }
+       else if(str[i]=='}')
+       {    cur--;
+           if(cur<0){cout<<"not balanced"; return 0;}
+       }
+    }
+    if(cur==0 && squ==0 && par==0)
+    {
+        cout<<"balanced";
+    
+    }
+    else
+    {
+        cout<<"not balanced";
+     
+    }
+}                                   //output==not balanced
+
+
+
+
